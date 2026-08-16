@@ -3,68 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#05070b">
+  <meta name="theme-color" content="#050713">
   <meta name="description" content="Astralya — a living celestial world for Stargazers.">
-  <title>Astralya — Welcome, Stargazer</title>
+  <title>Astralya — Stargazer</title>
   <link rel="stylesheet" href="styles.css">
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.179.1/build/three.module.js"}}
+  </script>
 </head>
 <body>
-  <main id="experience" class="experience" aria-live="polite">
-    <section id="earth" class="scene scene-earth" aria-label="The entrance to Astralya">
-      <div class="stars stars-earth" aria-hidden="true"></div>
-      <div class="door-glow" aria-hidden="true"></div>
-
-      <button id="door" class="door" type="button" aria-label="Open the ancient wooden door">
-        <span class="door-frame" aria-hidden="true"></span>
-        <span class="door-panel door-panel-left" aria-hidden="true"></span>
-        <span class="door-panel door-panel-right" aria-hidden="true"></span>
-        <span class="door-crossbar" aria-hidden="true"></span>
-        <span class="door-handle" aria-hidden="true"></span>
-      </button>
-
-      <p class="instruction" id="instruction">Tap the door to enter</p>
+  <main id="experience" class="experience">
+    <canvas id="world" aria-label="Interactive Astralya entrance"></canvas>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <section class="opening-copy" id="opening-copy" aria-live="polite">
+      <div class="eyebrow">ASTRALYA</div>
+      <h1 id="title">A world waiting for you.</h1>
+      <p id="instruction">Tap the door to enter</p>
     </section>
-
-    <section id="astralya" class="scene scene-astralya" aria-label="Astralya awakens">
-      <div class="night-sky" aria-hidden="true">
-        <div class="moon"></div>
-        <div class="constellation constellation-one"></div>
-        <div class="constellation constellation-two"></div>
-        <div class="stars stars-main"></div>
-      </div>
-
-      <div class="bridge" aria-hidden="true">
-        <div class="bridge-rail bridge-rail-left"></div>
-        <div class="bridge-rail bridge-rail-right"></div>
-        <div class="bridge-deck"></div>
-        <div class="vines vines-left"></div>
-        <div class="vines vines-right"></div>
-        <div class="orchids orchids-left">✦</div>
-        <div class="orchids orchids-right">✦</div>
-      </div>
-
-      <div class="tree" aria-hidden="true">
-        <div class="tree-glow"></div>
-        <div class="trunk"></div>
-        <div class="branch branch-a"></div>
-        <div class="branch branch-b"></div>
-        <div class="canopy canopy-a"></div>
-        <div class="canopy canopy-b"></div>
-        <div class="canopy canopy-c"></div>
-      </div>
-
-      <div class="water" aria-hidden="true"></div>
-      <div class="fireflies" aria-hidden="true"></div>
-      <div class="petals" aria-hidden="true"></div>
-
-      <div class="welcome" id="welcome" aria-hidden="true">
-        <p class="welcome-line" id="welcome-line"></p>
-        <p class="welcome-sub" id="welcome-sub"></p>
-        <button id="chart" class="chart-button" type="button">Build Your Chart</button>
-      </div>
+    <section class="welcome-copy" id="welcome-copy" aria-live="polite">
+      <p class="eyebrow">THE SKY WORLD</p>
+      <h2 id="welcome-title">Welcome, Stargazer.</h2>
+      <p id="welcome-sub">The stars have aligned.</p>
+      <button id="chart" type="button">Begin your chart</button>
     </section>
+    <button class="door-hit" id="door-hit" type="button" aria-label="Open the door"></button>
   </main>
-
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
