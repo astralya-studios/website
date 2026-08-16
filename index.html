@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#05070b">
+  <meta name="description" content="Astralya — a living celestial world for Stargazers.">
+  <title>Astralya — Welcome, Stargazer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="experience" class="experience" aria-live="polite">
+    <section id="earth" class="scene scene-earth" aria-label="The entrance to Astralya">
+      <div class="stars stars-earth" aria-hidden="true"></div>
+      <div class="door-glow" aria-hidden="true"></div>
+
+      <button id="door" class="door" type="button" aria-label="Open the ancient wooden door">
+        <span class="door-frame" aria-hidden="true"></span>
+        <span class="door-panel door-panel-left" aria-hidden="true"></span>
+        <span class="door-panel door-panel-right" aria-hidden="true"></span>
+        <span class="door-crossbar" aria-hidden="true"></span>
+        <span class="door-handle" aria-hidden="true"></span>
+      </button>
+
+      <p class="instruction" id="instruction">Tap the door to enter</p>
+    </section>
+
+    <section id="astralya" class="scene scene-astralya" aria-label="Astralya awakens">
+      <div class="night-sky" aria-hidden="true">
+        <div class="moon"></div>
+        <div class="constellation constellation-one"></div>
+        <div class="constellation constellation-two"></div>
+        <div class="stars stars-main"></div>
+      </div>
+
+      <div class="bridge" aria-hidden="true">
+        <div class="bridge-rail bridge-rail-left"></div>
+        <div class="bridge-rail bridge-rail-right"></div>
+        <div class="bridge-deck"></div>
+        <div class="vines vines-left"></div>
+        <div class="vines vines-right"></div>
+        <div class="orchids orchids-left">✦</div>
+        <div class="orchids orchids-right">✦</div>
+      </div>
+
+      <div class="tree" aria-hidden="true">
+        <div class="tree-glow"></div>
+        <div class="trunk"></div>
+        <div class="branch branch-a"></div>
+        <div class="branch branch-b"></div>
+        <div class="canopy canopy-a"></div>
+        <div class="canopy canopy-b"></div>
+        <div class="canopy canopy-c"></div>
+      </div>
+
+      <div class="water" aria-hidden="true"></div>
+      <div class="fireflies" aria-hidden="true"></div>
+      <div class="petals" aria-hidden="true"></div>
+
+      <div class="welcome" id="welcome" aria-hidden="true">
+        <p class="welcome-line" id="welcome-line"></p>
+        <p class="welcome-sub" id="welcome-sub"></p>
+        <button id="chart" class="chart-button" type="button">Build Your Chart</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
