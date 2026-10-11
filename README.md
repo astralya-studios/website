@@ -1,2 +1,0 @@
-# astrayla-studios-website
-website
