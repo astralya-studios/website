@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+
+  /* Deep nighttime foundation — not dark fantasy */
+  --color-night-950: #060a1a;
+  --color-night-900: #0a0f24;
+  --color-night-800: #101736;
+  --color-night-700: #1b2349;
+  --color-night-600: #2a3563;
+
+  /* Soft cream / warm whites */
+  --color-cream-50: #faf7ef;
+  --color-cream-100: #f5efe2;
+  --color-cream-200: #e9dfc9;
+  --color-cream-300: #d9cba9;
+
+  /* Restrained celestial accent */
+  --color-starlight-200: #d7d1f5;
+  --color-starlight-300: #c3bcf0;
+  --color-starlight-400: #a79ae4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-night-900 text-cream-50 font-sans antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-starlight-400);
+  color: var(--color-night-950);
+}
+
+/* Accessible focus everywhere */
+:focus-visible {
+  outline: 2px solid var(--color-starlight-300);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Thin elegant scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-night-950);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-night-600);
+  border-radius: 8px;
+}
+
+/* Subtle starfield — a few quiet stars, not a glitter storm */
+.starfield {
+  background-image:
+    radial-gradient(1px 1px at 12% 22%, rgba(250, 247, 239, 0.7), transparent 60%),
+    radial-gradient(1px 1px at 78% 12%, rgba(250, 247, 239, 0.5), transparent 60%),
+    radial-gradient(1.5px 1.5px at 34% 68%, rgba(195, 188, 240, 0.55), transparent 60%),
+    radial-gradient(1px 1px at 56% 38%, rgba(250, 247, 239, 0.4), transparent 60%),
+    radial-gradient(1px 1px at 88% 64%, rgba(250, 247, 239, 0.55), transparent 60%),
+    radial-gradient(1.5px 1.5px at 22% 84%, rgba(195, 188, 240, 0.4), transparent 60%),
+    radial-gradient(1px 1px at 66% 88%, rgba(250, 247, 239, 0.45), transparent 60%),
+    radial-gradient(1px 1px at 44% 8%, rgba(250, 247, 239, 0.5), transparent 60%);
+}
+
+/* Soft warm glow used sparingly behind hero art */
+.warm-glow {
+  background: radial-gradient(
+    ellipse 60% 45% at 50% 42%,
+    rgba(233, 223, 201, 0.1),
+    transparent 70%
+  );
+}
